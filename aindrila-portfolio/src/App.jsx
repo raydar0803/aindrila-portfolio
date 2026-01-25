@@ -32,8 +32,8 @@ export default function App() {
     <Navbar theme={theme} toggleTheme={toggleTheme} />  
       <Hero theme={theme} toggleTheme={toggleTheme} />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
       <Contact />
       <Footer />
     </>
