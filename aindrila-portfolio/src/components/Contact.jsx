@@ -36,7 +36,7 @@ export function Contact() {
   </a>
 
   <a
-    href="/src/assets/Aindrila%20Ray%20Resume%20.pdf"
+    href="/public/Aindrila%20Ray%20Resume%20.pdf"
     target="_blank"
     rel="noreferrer"
     className="contact-link"

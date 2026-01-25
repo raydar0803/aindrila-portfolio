@@ -17,7 +17,7 @@ end-to-end features across backend APIs, frontend UI, security, and performance.
 I also use modern AI tools to accelerate development and automation.
         </p>
         <div className="button-row">
-          <a href="/src/assets/Aindrila%20Ray%20Resume%20.pdf" className="hero-link primary" target="_blank" rel="noopener noreferrer">
+          <a href="/public/Aindrila%20Ray%20Resume%20.pdf" className="hero-link primary" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </div>
