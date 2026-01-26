@@ -14,7 +14,6 @@ export function Navbar({ theme, toggleTheme }) {
     return () => document.removeEventListener('click', handler);
   }, [menuOpen]);
   
-
   useEffect(() => {
     const sections = ['about', 'experience', 'skills', 'contact'];
 
@@ -25,11 +24,15 @@ export function Navbar({ theme, toggleTheme }) {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 120) {
+          if (rect.top <= 120 && rect.bottom >= 120) {
             current = id;
           }
         }
       });
+
+      if (current === 'contact') {
+        current = 'contact'; // Ensure 'contact' is highlighted correctly
+      }
 
       setActiveSection(current);
     };

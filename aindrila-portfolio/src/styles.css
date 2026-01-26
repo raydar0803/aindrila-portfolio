@@ -62,12 +62,26 @@ body.dark .mobile-theme-toggle:active {
 
   body.dark .theme-switch:hover,
   body.dark .mobile-theme-toggle:hover {
-    background: rgba(242, 205, 159, 0.18);
+    background: rgba(246, 231, 217, 0.18);
     box-shadow: 0 6px 18px rgba(212, 170, 120, 0.25);
   }
 }
 
-/* .theme-switch,
+@media (max-width: 768px) {
+  .navbar {
+    padding-top: 14px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 96px !important; /* space for navbar + visual breathing */
+  }
+}
+
+
+/* .theme-switch, 
 .mobile-theme-toggle {
   border-radius: 14px;
   padding: 8px 12px;
