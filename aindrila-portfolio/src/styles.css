@@ -76,7 +76,7 @@ body.dark .mobile-theme-toggle:active {
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 96px !important; /* space for navbar + visual breathing */
+    padding-top: 112px !important;
   }
 }
 
