@@ -62,6 +62,8 @@ export function Skills() {
           'IntelliJ IDEA',
           'VS Code',
           'Postman',
+          'Bruno',
+          'Swagger',
         ],
       },
     ];
