@@ -34,15 +34,6 @@ export function Contact() {
   >
     GitHub
   </a>
-
-  <a
-    href="/public/Aindrila%20Ray%20Resume%20.pdf"
-    target="_blank"
-    rel="noreferrer"
-    className="contact-link"
-  >
-    Resume
-  </a>
 </div>
 
         </div>

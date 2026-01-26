@@ -5,7 +5,7 @@ export function Experience() {
 
       {/* Full-time Role */}
       <div className="card" style={{ backgroundColor: 'var(--card-bg)', color: 'var(--text-color)', marginBottom: '32px' }}>
-        <h4 style={{ color: 'var(--text-color)' }}>JP Morgan Chase & Co. — Software Development Engineer</h4>
+        <h4 style={{ color: 'var(--text-color)' }}>JP Morgan Chase — Software Development Engineer</h4>
         <p style={{ color: 'var(--muted-text)', marginBottom: '10px' }}>
           July 2024 – Present
         </p>
@@ -103,7 +103,7 @@ export function Experience() {
 
       {/* Internship 1 */}
       <div className="card" style={{ marginBottom: '32px' }}>
-        <h4>JP Morgan Chase & Co. — Software Development Engineer Intern</h4>
+        <h4>JP Morgan Chase — Software Development Engineer Intern</h4>
         <p style={{ color: 'var(--muted-text)', marginBottom: '10px' }}>
           January 2024 – June 2024
         </p>
@@ -134,7 +134,7 @@ export function Experience() {
 
       {/* Internship 2 */}
       <div className="card">
-        <h4>JP Morgan Chase & Co. — Software Development Engineer Intern</h4>
+        <h4>JP Morgan Chase — Software Development Engineer Intern</h4>
         <p style={{ color: 'var(--muted-text)', marginBottom: '10px' }}>
           June 2023 – July 2023
         </p>

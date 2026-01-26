@@ -7,6 +7,7 @@ import {Contact} from './components/Contact';
 import {Footer} from './components/Footer';
 import { Navbar } from './components/Navbar';
 
+
 export default function App() {
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('theme');
