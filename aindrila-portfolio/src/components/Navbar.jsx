@@ -45,7 +45,7 @@ export function Navbar({ theme, toggleTheme }) {
   };
 
   return (
-    <nav className="navbar" style = {{ width: '100vw', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
+    <nav className="navbar">
       <div className="nav-left">
         <a href="#top" className="nav-name">
           Aindrila Ray

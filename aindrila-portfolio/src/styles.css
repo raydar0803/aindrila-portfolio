@@ -603,7 +603,7 @@ h2 {
   /* Disable sticky header at high zoom / small viewport */
   @media (max-height: 700px) {
     .navbar {
-      position: static;
+      position: fixed;
     }
   }
   
@@ -694,7 +694,7 @@ h2 {
 
   @media (max-height: 700px) {
     .footer {
-      position: static;
+      position: fixed;
     }
   }
   

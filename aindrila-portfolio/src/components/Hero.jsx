@@ -48,24 +48,26 @@ I also use modern AI tools to accelerate development and automation.
 
 const handleDownload = async () => {
   try {
-    const response = await fetch('./public/Aindrila_Ray_Resume.pdf'); // Adjusted path to point to the public folder
+    const response = await fetch('/Aindrila_Ray_Resume.pdf', {
+      cache: 'no-cache',
+    });
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
 
+    const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = 'Aindrila_Ray_Resume.pdf';
     document.body.appendChild(a);
     a.click();
     a.remove();
-
     window.URL.revokeObjectURL(url);
   } catch (err) {
-    console.error('Download failed:', err.message);
-    alert('Failed to download the resume. Please try again later.');
+    console.error('Resume download failed:', err);
+    alert('Sorry, the resume could not be downloaded. Please try again.');
   }
 };
