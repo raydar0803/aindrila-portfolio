@@ -31,7 +31,7 @@ export function Experience() {
             and operational hygiene across the organization.
           </li>
           <li>
-            Implemented runtime encryption using <strong>HERA KMS</strong>, eliminating
+            Implemented runtime encryption using <strong>KMS</strong>, eliminating
             plaintext data exposure and strengthening security compliance for
             sensitive workflows.
           </li>
