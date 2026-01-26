@@ -26,6 +26,58 @@
     align-items: center;
     transition: background-color 0.25s ease, border-color 0.25s ease;
   }
+  /* ===== Remove Mobile Tap Highlight (Theme Toggles) ===== */
+.theme-switch,
+.mobile-theme-toggle {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove default focus/active styles */
+.theme-switch:focus,
+.theme-switch:active,
+.mobile-theme-toggle:focus,
+.mobile-theme-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.theme-switch:active,
+.mobile-theme-toggle:active {
+  transform: scale(0.94);
+  background: rgba(146, 64, 14, 0.18);
+}
+
+body.dark .theme-switch:active,
+body.dark .mobile-theme-toggle:active {
+  background: rgba(212, 170, 120, 0.22);
+}
+
+@media (hover: hover) {
+  .theme-switch:hover,
+  .mobile-theme-toggle:hover {
+    background: rgba(146, 64, 14, 0.14);
+    border-color: rgba(146, 64, 14, 0.35);
+    box-shadow: 0 6px 18px rgba(146, 64, 14, 0.18);
+  }
+
+  body.dark .theme-switch:hover,
+  body.dark .mobile-theme-toggle:hover {
+    background: rgba(242, 205, 159, 0.18);
+    box-shadow: 0 6px 18px rgba(212, 170, 120, 0.25);
+  }
+}
+
+/* .theme-switch,
+.mobile-theme-toggle {
+  border-radius: 14px;
+  padding: 8px 12px;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.15s ease,
+    box-shadow 0.25s ease;
+} */
+
   
   .switch-thumb {
     width: 24px;
@@ -105,6 +157,25 @@ h2 {
     color: var(--muted-text);
   }
   
+  /* ===== Remove Mobile Tap Highlight (Resume Button) ===== */
+.hero-link.primary {
+  -webkit-tap-highlight-color: transparent;
+}
+/* Remove default focus/active styles for resume button */
+.hero-link.primary:focus,
+.hero-link.primary:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.hero-link.primary:active {
+  transform: scale(0.96);
+  background: rgba(146, 64, 14, 0.18);
+}
+body.dark .hero-link.primary:active {
+  background: rgba(212, 170, 120, 0.22);
+}
+
 
   
   
@@ -893,6 +964,26 @@ h2 {
     transform 0.15s ease,
     box-shadow 0.25s ease;
 }
+/* ===== Remove Mobile Tap Highlight ===== */
+.hamburger {
+  -webkit-tap-highlight-color: transparent;
+}
+/* Remove default button focus/active styles */
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+  box-shadow: none;
+  background: rgba(146, 64, 14, 0.14); /* sandstone press color */
+}
+.hamburger:active {
+  transform: scale(0.94);
+  background: rgba(146, 64, 14, 0.18);
+}
+
+body.dark .hamburger:active {
+  background: rgba(212, 170, 120, 0.22);
+}
+
 
 /* Hover state */
 .hamburger:hover {
