@@ -6,7 +6,7 @@ export function About() {
       <h3>About</h3>
       <div className="about-card" style={{ backgroundColor: 'var(--card-bg)', color: 'var(--text-color)', padding: '20px', borderRadius: '12px' }}>
         <p className="about-lead" style={{ color: 'var(--muted-text)' }}>
-          Full Stack Software Engineer at JP Morgan Chase & Co. building secure, scalable IAM platforms
+          Full Stack Software Engineer at JP Morgan Chase building secure, scalable IAM platforms
           using Java, Spring Boot, and React.
         </p>
 

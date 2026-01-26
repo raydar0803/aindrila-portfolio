@@ -15,34 +15,34 @@ export function Navbar({ theme, toggleTheme }) {
   }, [menuOpen]);
   
   useEffect(() => {
-    const sections = ['about', 'experience', 'skills', 'contact'];
-
-    const handleScroll = () => {
-      let current = 'top';
-
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            current = id;
-          }
+    const sectionIds = ['about', 'experience', 'skills', 'contact'];
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the entry with the highest intersection ratio
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+  
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].target.id);
         }
-      });
-
-      if (current === 'contact') {
-        current = 'contact'; // Ensure 'contact' is highlighted correctly
+      },
+      {
+        root: null,
+        rootMargin: '-40% 0px -40% 0px', // center bias
+        threshold: [0.25, 0.5, 0.75],
       }
-
-      setActiveSection(current);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
+    );
+  
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  
+    return () => observer.disconnect();
   }, []);
-
+  
   const handleNavClick = () => {
     setMenuOpen(false); // close menu after clicking a link
   };

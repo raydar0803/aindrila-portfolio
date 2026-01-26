@@ -1,11 +1,20 @@
 export function Experience() {
   return (
-    <section id='experience' className="section">
+    <section id="experience" className="section">
       <h3>Experience</h3>
 
       {/* Full-time Role */}
-      <div className="card" style={{ backgroundColor: 'var(--card-bg)', color: 'var(--text-color)', marginBottom: '32px' }}>
-        <h4 style={{ color: 'var(--text-color)' }}>JP Morgan Chase — Software Development Engineer</h4>
+      <div
+        className="card"
+        style={{
+          backgroundColor: 'var(--card-bg)',
+          color: 'var(--text-color)',
+          marginBottom: '32px',
+        }}
+      >
+        <h4 style={{ color: 'var(--text-color)' }}>
+          JP Morgan Chase — Software Development Engineer
+        </h4>
         <p style={{ color: 'var(--muted-text)', marginBottom: '10px' }}>
           July 2024 – Present
         </p>
@@ -13,30 +22,40 @@ export function Experience() {
         <ul style={{ color: 'var(--text-color)' }}>
           <li>
             Built and maintained secure, end-to-end full-stack features using Java,
-            Spring Boot, and React for a large-scale IAM certification platform.
+            Spring Boot, and React for a large-scale{' '}
+            <strong>enterprise access governance and certification platform</strong>.
           </li>
           <li>
-            Delivered solutions supporting 23,500+ certification groups and 12,000+
-            certifiers, improving audit readiness and operational hygiene across the
-            organization.
+            Delivered solutions supporting <strong>23,500+</strong> certification
+            groups and <strong>12,000+</strong> certifiers, improving audit readiness
+            and operational hygiene across the organization.
           </li>
           <li>
-            Implemented runtime encryption using HERA KMS, eliminating plaintext data
-            exposure and strengthening security compliance for sensitive workflows.
+            Implemented runtime encryption using <strong>HERA KMS</strong>, eliminating
+            plaintext data exposure and strengthening security compliance for
+            sensitive workflows.
           </li>
           <li>
-            Modernized React-based UIs and improved accessibility to WCAG standards,
-            boosting customer satisfaction (CSAT) from 75% to 93%.
+            Modernized React-based UIs and improved accessibility to{' '}
+            <strong>WCAG standards</strong>, boosting customer satisfaction (CSAT) from{' '}
+            <strong>75% to 93%</strong>.
           </li>
           <li>
-            Resolved 4,000+ access violations per certification cycle and delivered
-            critical UI and backend fixes to ensure platform stability during peak
-            usage periods.
+            <strong>Supported the resolution of 4,000+</strong> access violations per
+            certification cycle and delivered critical UI and backend fixes to ensure
+            platform stability during peak usage periods.
           </li>
           <li>
-            Conducted load and stress testing using JMeter and BlazeMeter, improving
-            API response times by ~30% and increasing system reliability under
-            production traffic.
+            Conducted load and stress testing using <strong>JMeter</strong> and{' '}
+            <strong>BlazeMeter</strong>, improving API response times by{' '}
+            <strong>~30%</strong> and increasing system reliability under production
+            traffic.
+          </li>
+          <li>
+            Built and maintained{' '}
+            <strong>end-to-end UI automation tests using Playwright</strong>,
+            improving regression coverage and reducing manual testing effort for
+            critical workflows.
           </li>
         </ul>
 
@@ -46,13 +65,14 @@ export function Experience() {
 
           <div className="featured-item">
             <p>
-              <strong>IAM Certification Platform</strong>
+              <strong>Enterprise Access Governance Platform</strong>
             </p>
             <p className="about-text">
-              Built and scaled a full-stack IAM certification platform used by 3,000+
-              internal business users. Implemented runtime encryption using KMS,
-              delivered WCAG accessibility improvements, and improved platform
-              reliability and audit readiness during critical certification cycles.
+              Worked on a full-stack enterprise access governance and certification
+              platform used by 3,000+ internal business users. Implemented runtime
+              encryption using KMS, delivered WCAG accessibility improvements, and
+              improved platform reliability and audit readiness during critical
+              certification cycles.
             </p>
             <div className="tech-chips">
               {['Java', 'Spring Boot', 'React', 'KMS', 'REST APIs'].map((t) => (
@@ -74,24 +94,6 @@ export function Experience() {
             </p>
             <div className="tech-chips">
               {['React', 'Spring Boot', 'WCAG', 'JMeter', 'BlazeMeter'].map((t) => (
-                <span key={t} className="tech-chip">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="featured-item">
-            <p>
-              <strong>AI-Assisted Internal Tooling</strong>
-            </p>
-            <p className="about-text">
-              Used LLMs and modern AI tools to accelerate internal tool development,
-              automate repetitive workflows, and improve developer productivity
-              without compromising core system reliability.
-            </p>
-            <div className="tech-chips">
-              {['Java', 'React', 'LLMs', 'OpenHands'].map((t) => (
                 <span key={t} className="tech-chip">
                   {t}
                 </span>
