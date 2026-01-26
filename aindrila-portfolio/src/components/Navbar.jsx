@@ -1,50 +1,52 @@
 import { useEffect, useState } from 'react';
 
 export function Navbar({ theme, toggleTheme }) {
-  const [activeSection, setActiveSection] = useState('top');
+  const [activeSection, setActiveSection] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Close mobile menu when clicking outside
   useEffect(() => {
     const handler = (e) => {
       if (!e.target.closest('.navbar')) {
         setMenuOpen(false);
       }
     };
+
     if (menuOpen) document.addEventListener('click', handler);
     return () => document.removeEventListener('click', handler);
   }, [menuOpen]);
-  
+
+  // Scroll-spy logic (CORRECT, SINGLE EFFECT)
   useEffect(() => {
     const sectionIds = ['about', 'experience', 'skills', 'contact'];
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find the entry with the highest intersection ratio
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-  
-        if (visibleSections.length > 0) {
-          setActiveSection(visibleSections[0].target.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
       },
       {
         root: null,
-        rootMargin: '-40% 0px -40% 0px', // center bias
-        threshold: [0.25, 0.5, 0.75],
+
+        // Section becomes active when its top enters middle reading band
+        rootMargin: '-35% 0px -55% 0px',
+        threshold: 0,
       }
     );
-  
+
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-  
+
     return () => observer.disconnect();
   }, []);
-  
+
   const handleNavClick = () => {
-    setMenuOpen(false); // close menu after clicking a link
+    setMenuOpen(false);
   };
 
   return (
@@ -111,32 +113,16 @@ export function Navbar({ theme, toggleTheme }) {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div className="mobile-menu">
-          <a
-            href="#about"
-            className="mobile-link"
-            onClick={handleNavClick}
-          >
+          <a href="#about" className="mobile-link" onClick={handleNavClick}>
             About
           </a>
-          <a
-            href="#experience"
-            className="mobile-link"
-            onClick={handleNavClick}
-          >
+          <a href="#experience" className="mobile-link" onClick={handleNavClick}>
             Experience
           </a>
-          <a
-            href="#skills"
-            className="mobile-link"
-            onClick={handleNavClick}
-          >
+          <a href="#skills" className="mobile-link" onClick={handleNavClick}>
             Skills
           </a>
-          <a
-            href="#contact"
-            className="mobile-link"
-            onClick={handleNavClick}
-          >
+          <a href="#contact" className="mobile-link" onClick={handleNavClick}>
             Contact
           </a>
 
