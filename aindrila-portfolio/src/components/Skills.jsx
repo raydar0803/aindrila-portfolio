@@ -50,6 +50,7 @@ export function Skills() {
           'Git',
           'GitHub',
           'CI/CD',
+          'Jenkins',
           'JMeter',
           'BlazeMeter',
           'Playwright',
